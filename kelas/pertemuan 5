@@ -1,0 +1,108 @@
+#list
+praktikum = ["Mahasiswa", 20, True, 45.10, ['APD',25]]
+
+print(praktikum[4][1])
+
+
+studyclub = ["Data Science", "Robotics", "Multimedia", "Network"]
+print(studyclub)
+# Kita akan mengganti elemen di indeks ke-2, yakni "Multimedia"
+studyclub[2] = "AI"
+print(studyclub)
+
+matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+print(matakuliah)
+# menghapus elemen pada indeks ke-2, yakni "Kalkulus"
+del matakuliah[2]
+print(matakuliah)
+
+matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+print(matakuliah)
+# menghapus elemen dengan nilai "Kalkulus"
+matakuliah.remove('APD')
+print(matakuliah)
+
+matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+print(matakuliah)
+# Menghapus & mengambil elemen 'Kalkulus' pada indeks ke-2
+sampah = matakuliah.pop(2)
+print(matakuliah)
+print(sampah)
+
+# list
+matakuliah = ['PTI', 'APD','Kalkulus','Diskrit','Bahasa Inggris',
+'Orsikom','Basis Data']
+# Menampilkan list mulai dari indeks 1 hingga 5 dengan loncatan 2
+print(matakuliah[1:6:2])
+
+# list
+matakuliah = ['PTI', 'APD','Kalkulus','Diskrit','Bahasa Inggris',
+'Orsikom','Basis Data']
+# Menampilkan list mulai dari indeks 1 hingga 5 dengan loncatan 2
+print(matakuliah[0:7:3])
+
+# List
+a = [1, 2, 3]
+b = [4, 5, 6]
+# menggabungkan kedua list dengan operator (+)
+c = a + b
+print(c)
+
+# List
+a = ["teknik", "informatika"]
+# mengulang isi list dengan operator (*) sebanyak 3 kali
+c = a*3
+print(c)
+
+
+#membuat nasted
+# Membuat Nested List
+kelas = [
+ #B [0]      [1]     [2]                A
+["Ridho", "Lian", "Nabil"],        # indeks [0]
+["Daffa", "Dante", "Santoso"],      # indeks [1]
+["Pernanda", "Riyadi", "Ahnaf"],   # indeks [2]
+]
+# Memanggil elemen "Santoso"
+print(kelas[1][2])
+#          [A][B]
+# output Santoso
+
+# list mahasiswa
+mahasiswa = [["Daffa", "Dante", "Santoso"], ["Pernanda", "Triya", "Ahnaf"]]
+# perulangan for untuk mendapatkan semua elemen
+for i in mahasiswa:
+    for j in i :
+        print (j)
+
+
+# tuple
+tugas = ('rangkuman', 'arduino','scrapping') #elemen dibungkus kedalam variabel tugas
+
+# beri variabel setiap values
+(p, orsikom, basisdata) = tugas
+print(p)
+print(orsikom)
+print(basisdata)
+#print satu per satu 
+
+# tuple
+barang = ('triangle','bola', 'meja', 'handphone', 'televisi')
+# beri variabel setiap values
+(segitiga, bulat, *kotak) = barang
+print(segitiga)
+print(bulat)
+print(kotak[0])
+
+barang = [['triangle','bola'], ['meja', 'handphone'], ['televisi', 'laptop']]
+
+for nama_barang in barang:
+    print (nama_barang)
+    (barang1, barang2) = nama_barang
+    print(barang1)
+    print(barang2)
+
+
+mahasiswa = [["",""],["",""],("","")]
+for nama_mhs in mahasiswa:
+    print(mahasiswa)
