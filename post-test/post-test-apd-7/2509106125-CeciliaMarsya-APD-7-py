@@ -16,14 +16,14 @@ paket_studio = {
 }
 
 def tampilkan_paket_studio():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' )
     print("=== DAFTAR PAKET STUDIO MUSIK ===")
     for v in paket_studio.values():
         print(f"{v['nama']} | Durasi: {v['durasi']} jam | Harga: Rp{v['harga']:,}")
     input("\nTekan Enter untuk kembali...")
 
 def tampilkan_penyewaan():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' )
     print("=== DATA PENYEWAAN STUDIO ===")
     if not data_penyewaan:
         print("Belum ada data penyewaan.")
@@ -39,7 +39,7 @@ def tampilkan_penyewaan():
     input("\nTekan Enter untuk kembali...")
 
 def tambah_penyewaan(id_pelanggan, nama_pelanggan):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' )
     print("=== TAMBAH DATA PENYEWAAN ===")
     if id_pelanggan in data_penyewaan:
         print("ID penyewa sudah ada!")
@@ -64,7 +64,7 @@ def tambah_penyewaan(id_pelanggan, nama_pelanggan):
     input("Tekan Enter untuk kembali...")
 
 def ubah_data_penyewaan(id_pelanggan):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' )
     print("=== UBAH DATA PENYEWAAN ===")
     if id_pelanggan in data_penyewaan:
         print("1. Ubah Nama")
@@ -102,7 +102,7 @@ def konfirmasi_keluar():
 
 def main_menu_studio(is_admin):
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('cls' )
         print("=== MENU UTAMA STUDIO MUSIK ===")
         print("1. Tambah Data Penyewaan")
         print("2. Lihat Data Penyewaan")
@@ -137,19 +137,20 @@ def main_menu_studio(is_admin):
             print("Menu tidak valid.")
             input("Tekan Enter untuk kembali...")
 
-# Menu awal
 while True:
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' )
     print("=== SISTEM MANAJEMEN PENYEWAAN STUDIO MUSIK ===")
     print("1. Login")
     print("2. Register Akun Baru")
     print("3. Keluar")
     pilih_awal = input("Pilih menu: ")
+   
     if pilih_awal == "1":
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('cls' )
         print("=== LOGIN SISTEM STUDIO MUSIK ===")
         username = input("Masukkan username: ")
         password = input("Masukkan password: ")
+
         if username in akun and akun[username] == password:
             print("Login berhasil sebagai admin!" if username == "admin" else "Login berhasil!")
             input("Tekan Enter untuk lanjut...")
@@ -161,20 +162,25 @@ while True:
         else:
             print("Login gagal! Username atau password salah.")
             input("Tekan Enter untuk kembali...")
+
     elif pilih_awal == "2":
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('cls' )
         print("=== REGISTER AKUN BARU ===")
         new_user = input("Masukkan username baru: ")
         new_pass = input("Masukkan password baru: ")
+
         if new_user in akun or new_user in akun_tambahan:
             print("Username sudah terdaftar! Silakan coba lagi.")
         else:
             akun_tambahan[new_user] = new_pass
             print("Akun berhasil dibuat! Silakan login menggunakan akun baru.")
+
         input("Tekan Enter untuk kembali ke menu awal...")
+
     elif pilih_awal == "3":
         if konfirmasi_keluar():
             break
     else:
-        print("Pilihan tidak valid!")
-        input("Tekan Enter untuk kembali...")
+         print("Pilihan tidak valid!")
+         input("Tekan Enter untuk kembali...")
+        
